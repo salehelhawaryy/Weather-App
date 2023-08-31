@@ -25,7 +25,7 @@ function loadLocation(Location){
         inputText.placeholder = "Search Location..."
         inputText.style = "height: 100%;flex-shrink: 2;max-width: 150px;background-color: rgba(0,0,0,0);border: none;font-size: 15px;font-weight: 600;"
         const searchIcon = document.createElement('div')
-        searchIcon.style = "height: 18px;min-width: 18px;background-image: url(../assets/search.svg);background-size: contain;background-repeat: no-repeat;cursor: pointer;"
+        searchIcon.style = "height: 18px;min-width: 18px;background-image: url(assets/search.svg);background-size: contain;background-repeat: no-repeat;cursor: pointer;"
         searchIcon.addEventListener('click', () => {
             if (inputText.value === ''){
                 alert('Please type a location')
@@ -46,16 +46,16 @@ function loadLocation(Location){
         location.style="font-size:20px";
         const windspeed = document.createElement('div')
         windspeed.classList.add('wind-text')
-        windspeed.innerHTML = `<img src='../assets/wind.svg' style='width:40px !important;height:60px !important'><div><p class='mb-0'>Wind Speed</p><p class='mb-0' style='font-size:30px;font-weight:700'>${resJSON.current.wind_kph} Kp/h</p></div>`
+        windspeed.innerHTML = `<img src='assets/wind.svg' style='width:40px !important;height:60px !important'><div><p class='mb-0'>Wind Speed</p><p class='mb-0' style='font-size:30px;font-weight:700'>${resJSON.current.wind_kph} Kp/h</p></div>`
         const feelsLike = document.createElement('div');
         feelsLike.classList.add('wind-text')
-        feelsLike.innerHTML = `<img src='../assets/thermometer-sun.svg' style='width:50px !important;height:60px !important;'><div><p class='mb-0'>Feels Like</p><p class='mb-2' style='font-size:30px;font-weight:700'>${resJSON.current.feelslike_c}  °C</p></div>`
+        feelsLike.innerHTML = `<img src='assets/thermometer-sun.svg' style='width:50px !important;height:60px !important;'><div><p class='mb-0'>Feels Like</p><p class='mb-2' style='font-size:30px;font-weight:700'>${resJSON.current.feelslike_c}  °C</p></div>`
         const humidity = document.createElement('div')
         humidity.classList.add('ano-text')
-        humidity.innerHTML = `<img src='../assets/humidity.png' style='width:40px !important;height:50px !important;'><div><p class='mb-0'>Humidity</p><p class='mb-2' style='font-size:30px;font-weight:700'>${resJSON.current.humidity}  %</p></div>`
+        humidity.innerHTML = `<img src='assets/humidity.png' style='width:40px !important;height:50px !important;'><div><p class='mb-0'>Humidity</p><p class='mb-2' style='font-size:30px;font-weight:700'>${resJSON.current.humidity}  %</p></div>`
         const rainChance = document.createElement('div')
         rainChance.classList.add('ano-text')
-        rainChance.innerHTML = `<img src='../assets/rain.png' style='width:43px !important;height:44px !important;'><div><p class='mb-0'>Chance of Rain</p><p class='mb-2' style='font-size:30px;font-weight:700'>${resJSON.forecast.forecastday[0].day.daily_chance_of_rain}  %</p></div>`
+        rainChance.innerHTML = `<img src='assets/rain.png' style='width:43px !important;height:44px !important;'><div><p class='mb-0'>Chance of Rain</p><p class='mb-2' style='font-size:30px;font-weight:700'>${resJSON.forecast.forecastday[0].day.daily_chance_of_rain}  %</p></div>`
         topRight.appendChild(feelsLike)
         topRight.appendChild(humidity)
         topRight.appendChild(rainChance)
