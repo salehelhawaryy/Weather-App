@@ -1,7 +1,7 @@
 # Weather-App
 
 This is a Project in the Odin full stack web development course.
-This Project was created using the WeatherAPI.
+This Project was created using WeatherAPI.
 
 Features:
 - Search a location for forecast data using country or city.
